@@ -38,9 +38,7 @@ async def handle_vidplay(url) -> str:
     # SUBS = url[1]
     subtitles = {}
     subtitles = await subtitle.vscsubs(url[1])
-    key1, key2 = requests.get(
-        'https://raw.githubusercontent.com/Ciarands/vidsrc-keys/main/keys.json'
-    ).json()
+    key1, key2 = "N5sAMLJFtEoYqYMd", "uURtqc2Mh2M4M4gz"
     # keys hosted by Ciarands (thanks) this is coooolll....:)
     decoded_id = decode_data(key1, url[0].split('/e/')[-1])
     encoded_result = decode_data(key2, decoded_id)
